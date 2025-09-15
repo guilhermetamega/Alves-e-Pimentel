@@ -1,5 +1,11 @@
+import Image from "next/image";
+import Logo from "../../public/Logo_Alves_E_Pimentel.svg";
+
 export default function Home() {
   return (
-    <div className="flex justify-center items-center h-full">Hello World!</div>
+    <div className="flex flex-col justify-center items-center h-full bg-primary-dark">
+      <Image src={Logo} width={500} alt="Logo Alves e Pimentel" />
+      <h1 className="text-5xl mt-18">Em Breve</h1>
+    </div>
   );
 }
