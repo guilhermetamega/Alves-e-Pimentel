@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Head from "./components/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alves e Pimentel",
+  title: "Alves & Pimentel",
   description: "Advocacia",
 };
 
@@ -24,8 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <Head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-primary-dark bg-primary`}
       >
         {children}
       </body>
