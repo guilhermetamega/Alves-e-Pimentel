@@ -5,6 +5,7 @@
 /*Nodes*/
 @import "tailwindcss";
 
+/*Tema*/
 @theme {
   /* Cores */
   --color-primary: #5d1b1b;

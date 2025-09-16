@@ -3,7 +3,7 @@ import Logo from "../../public/Logo_Alves_E_Pimentel.svg";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center h-full dark:text-gray-light">
+    <div className="flex flex-col justify-center items-center h-full text-gray-light">
       <Image
         src={Logo}
         width={500}
