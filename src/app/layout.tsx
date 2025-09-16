@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from "./components/head";
+import Head from "./components/Head";
 
 export const metadata: Metadata = {
   title: "Alves & Pimentel",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" data-theme="light">
       <Head />
-      <body className={`antialiased dark:bg-primary-dark bg-primary`}>
+      <body className={`antialiased dark:bg-primary-dark bg-primary `}>
         {children}
       </body>
     </html>
