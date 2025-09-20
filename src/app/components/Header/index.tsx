@@ -21,7 +21,7 @@ export default function Header({ children, id, className, bgColor }: Props) {
       <Navbar>
         <Link
           href="/Test"
-          className=" min-[720px]:pointer-events-none min-[720px]:cursor-default"
+          className=" max-[720px]:pointer-events-none max-[720px]:cursor-default"
         >
           <Image
             src={Logo}
