@@ -1,8 +1,8 @@
 const links = [
-  { href: "#inicio", label: "Início" },
-  { href: "#about", label: "Sobre" },
-  { href: "#services", label: "Serviços" },
-  { href: "#contact", label: "Contato" },
+  { href: "#about", label: "QUEM SOMOS" },
+  { href: "#services", label: "ÁREAS DE ATUAÇÃO" },
+  { href: "#partners", label: "PARCEIROS" },
+  { href: "#contact", label: "CONTATO" },
 ];
 
 export default links;

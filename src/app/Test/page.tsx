@@ -1,13 +1,12 @@
 import Header from "../components/Header";
+import Hr from "../components/Hr";
 import Section from "../components/Section";
 
 export default function Test() {
   return (
     <>
       <Header id={"inicio"} bgColor="primary" />
-      <Section id={"header"} bgColor="primary" className="">
-        <h1>Olá</h1>
-      </Section>
+      <Hr />
     </>
   );
 }
