@@ -19,11 +19,13 @@ export default function Header({ children, id, className, bgColor }: Props) {
       aria-labelledby={`${id}-title`}
     >
       <Navbar>
-        {/* Logo */}
-        <Link href="/Test" className="md:text-left md:flex-1">
+        <Link
+          href="/Test"
+          className=" min-[720px]:pointer-events-none min-[720px]:cursor-default"
+        >
           <Image
             src={Logo}
-            className="min-[320px]:w-1/2 min-[720px]:w-[156px] min-[720px]:h-[68px]"
+            className="w-[156px] h-[68px]"
             alt="Logo Alves e Pimentel"
           />
         </Link>
