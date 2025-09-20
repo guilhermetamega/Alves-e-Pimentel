@@ -1,8 +1,4 @@
 import { ReactNode } from "react";
-import Link from "next/link";
-import Navbar from "../Navbar";
-import Image from "next/image";
-import Logo from "../../../../public/Logo_Alves_E_Pimentel.svg";
 
 type Props = {
   children?: ReactNode;
@@ -15,21 +11,10 @@ export default function Header({ children, id, className, bgColor }: Props) {
   return (
     <header
       id={id}
-      className={`flex flex-col items-center bg-${bgColor} ${className} min-[1080px]:px-[128px] font-crimson-pro`}
+      className={`flex flex-col items-center bg-${bgColor} ${className} max-[1200px]:px-[64px] min-[1200px]:px-[128px] font-crimson-pro`}
       aria-labelledby={`${id}-title`}
     >
-      <Navbar>
-        <Link
-          href="/Test"
-          className=" max-[720px]:pointer-events-none max-[720px]:cursor-default"
-        >
-          <Image
-            src={Logo}
-            className="w-[156px] h-[68px]"
-            alt="Logo Alves e Pimentel"
-          />
-        </Link>
-      </Navbar>
+      {children}
     </header>
   );
 }

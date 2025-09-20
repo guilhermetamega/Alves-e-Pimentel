@@ -9,11 +9,11 @@ type Props = {
 export default function Navbar({ children }: Props) {
   return (
     <nav
-      className="flex flex-row w-full items-center justify-between max-[840px]:justify-center p-4"
+      className="flex flex-row w-full items-center justify-between max-[960px]:justify-center p-4"
       aria-label="Menu principal"
     >
       {children}
-      <ul className="hidden min-[840px]:flex gap-4 min-[840px]:items-center">
+      <ul className="hidden min-[960px]:flex gap-4 min-[960px]:items-center">
         {links.map((link) => (
           <li key={link.href}>
             <Link
