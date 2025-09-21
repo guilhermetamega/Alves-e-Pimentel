@@ -19,7 +19,7 @@ export default function TwoColorsText({
     <div className={`flex flex-row`}>
       <p className={`text-${colorOne}`}>{firstText}</p>
       {space == true ? <Space /> : ""}
-      <p className={`text-${colorTwo}`}>{secondText}</p>
+      <p className={colorTwo}>{secondText}</p>
     </div>
   );
 }

@@ -13,7 +13,11 @@ export default function Button({
   ...rest
 }: Props) {
   return (
-    <button className={`${className}`} onClick={onClick} {...rest}>
+    <button
+      className={`${className} flex flex-row`}
+      onClick={onClick}
+      {...rest}
+    >
       {children}
     </button>
   );
