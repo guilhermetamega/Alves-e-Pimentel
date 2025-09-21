@@ -35,7 +35,7 @@ export default function Test() {
       </Header>
       <Hr />
       <Section
-        className={`bg-[url("/bg_hero.png")] aspect-auto bg-no-repeat bg-cover bg-center px-[32px] pb-30 pt-6 min-[660px]:px-32 min-[660px]:pt-24 min-[660px]:pb-[280px] flex flex-col max-[1000px]:items-center max-[1000px]:text-center min-[1000px]:justify-start font-crimson-pro max-[660px]:text-2xl max-[860px]:text-3xl min-[860px]:text-4xl min-[1200px]:text-6xl gap-8`}
+        className={`bg-[url("/bg_hero.png")] aspect-auto bg-no-repeat bg-cover bg-center px-[32px] pb-30 pt-6 min-[660px]:px-32 min-[660px]:pt-24 min-[660px]:pb-[280px] flex flex-col max-[1000px]:items-center max-[1000px]:text-center min-[1000px]:justify-start font-crimson-pro max-[860px]:text-3xl min-[860px]:text-4xl min-[1200px]:text-6xl gap-8`}
         id={"hero"}
       >
         <NoGapDiv col={true} maxGap="8" minGap="0">
@@ -67,7 +67,9 @@ export default function Test() {
         id={"about"}
         className="my-4 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
       >
-        <h1 className="text-4xl text-center pb-8">QUEM SOMOS?</h1>
+        <h1 className="text-3xl max-[660px]:text-4xl text-center pb-8">
+          QUEM SOMOS?
+        </h1>
         <p className="text-center text-2xl">
           Acreditamos que cada caso é mais do que um processo, é uma parte da
           vida de alguém. Buscamos entregar segurança, clareza e resultados
