@@ -1,4 +1,4 @@
-import Space from "./space";
+import Space from "./utils";
 
 type Props = {
   colorOne: string;
@@ -16,7 +16,9 @@ export default function TwoColorsText({
   space,
 }: Props) {
   return (
-    <div className={`flex flex-row`}>
+    <div
+      className={`flex flex-row max-[1000px]:justify-center min-[1000px]:justify-start`}
+    >
       <p className={`text-${colorOne}`}>{firstText}</p>
       {space == true ? <Space /> : ""}
       <p className={colorTwo}>{secondText}</p>

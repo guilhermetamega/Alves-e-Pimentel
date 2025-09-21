@@ -1,14 +1,20 @@
+//Components
 import Header from "../components/Header";
 import Hr from "../components/Hr";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import Logo from "../../../public/Logo_Alves_E_Pimentel.svg";
 import Section from "../components/Section";
 import TwoColorsText from "../components/TwoColorsText";
 import Button from "../components/Button";
-import { goToWhatsapp } from "../actions";
 import NoGapDiv from "../components/NoGapDiv";
+import Pattern from "../components/Pattern";
+
+//Images
+import Logo from "../../../public/Logo_Alves_E_Pimentel.svg";
+
+//Actions
+import { goToWhatsapp } from "../actions";
 
 export default function Test() {
   return (
@@ -29,7 +35,7 @@ export default function Test() {
       </Header>
       <Hr />
       <Section
-        className={`bg-[url("/bg_hero.png")] aspect-auto bg-no-repeat bg-cover bg-center px-32 pt-24 pb-[280px] flex flex-col justify-start font-crimson-pro text-6xl gap-8`}
+        className={`bg-[url("/bg_hero.png")] aspect-auto bg-no-repeat bg-cover bg-center px-32 pt-24 pb-[280px] flex flex-col max-[1000px]:items-center max-[1000px]:text-center min-[1000px]:justify-start font-crimson-pro max-[760px]:text-2xl max-[860px]:text-3xl min-[860px]:text-4xl min-[1200px]:text-6xl gap-8`}
         id={"hero"}
       >
         <NoGapDiv col={true}>
@@ -55,6 +61,27 @@ export default function Test() {
           ENTRE EM CONTATO
         </Button>
       </Section>
+      <Hr />
+      <Pattern
+        className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain`}
+      />
+      <Section
+        id={"about"}
+        className="my-4 font-crimson-pro text-primary max-[1200px]:px-[64px] min-[1200px]:px-[128px]"
+      >
+        <h1 className="text-4xl text-center pb-8">QUEM SOMOS?</h1>
+        <p className="text-center text-2xl">
+          Acreditamos que cada caso é mais do que um processo, é uma parte da
+          vida de alguém. Buscamos entregar segurança, clareza e resultados
+          reais para quem confia em nosso trabalho, com ética, atenção aos
+          detalhes e uma escuta ativa, construímos relações sólidas com nossos
+          clientes e enfrentamos cada desafio com estratégia e responsabilidade.
+          Aqui, você é ouvido. E o seu direito, respeitado.
+        </p>
+      </Section>
+      <Pattern
+        className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain rotate-180 scale-x-[-1]`}
+      />
       <Hr />
     </>
   );
