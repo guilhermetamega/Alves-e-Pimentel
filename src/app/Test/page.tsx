@@ -15,6 +15,7 @@ import Logo from "../../../public/Logo_Alves_E_Pimentel.svg";
 
 //Actions
 import { goToWhatsapp } from "../actions";
+import Title from "../components/Title";
 
 export default function Test() {
   return (
@@ -65,11 +66,9 @@ export default function Test() {
       />
       <Section
         id={"about"}
-        className="my-4 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
+        className="my-8 min-[660px]:my-12 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
       >
-        <h1 className="text-3xl max-[660px]:text-4xl text-center pb-8">
-          QUEM SOMOS?
-        </h1>
+        <Title>QUEM SOMOS?</Title>
         <p className="text-center text-2xl">
           Acreditamos que cada caso é mais do que um processo, é uma parte da
           vida de alguém. Buscamos entregar segurança, clareza e resultados
@@ -83,6 +82,12 @@ export default function Test() {
         className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain rotate-180 scale-x-[-1]`}
       />
       <Hr />
+      <Section
+        id="services"
+        className="my-8 min-[660px]:my-12 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
+      >
+        <Title>ÁREAS DE ATUAÇÃO</Title>
+      </Section>
     </>
   );
 }
