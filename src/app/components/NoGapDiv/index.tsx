@@ -18,7 +18,7 @@ export default function NoGapDiv({
     <div
       className={`flex flex-${
         col == true ? "col" : "row"
-      } gap-${maxGap} max-[660px]:gap-${minGap}`}
+      } max-[660px]:gap-${maxGap} min-[660px]:gap-${minGap}`}
       {...rest}
     >
       {children}

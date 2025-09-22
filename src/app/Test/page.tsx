@@ -10,12 +10,22 @@ import Button from "../components/Button";
 import NoGapDiv from "../components/NoGapDiv";
 import Pattern from "../components/Pattern";
 
-//Images
+//Images and Icons
 import Logo from "../../../public/Logo_Alves_E_Pimentel.svg";
 
 //Actions
 import { goToWhatsapp } from "../actions";
 import Title from "../components/Title";
+import Card from "../components/Card";
+import { AppIcon } from "../components/AppIcon";
+import {
+  BriefcaseBusiness,
+  FileText,
+  Hotel,
+  House,
+  ShieldUser,
+  ShoppingCart,
+} from "lucide-react";
 
 export default function Test() {
   return (
@@ -61,15 +71,13 @@ export default function Test() {
         </Button>
       </Section>
       <Hr />
-      <Pattern
-        className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain`}
-      />
-      <Section
-        id={"about"}
-        className="my-8 min-[660px]:my-12 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
-      >
+
+      <Section id={"about"} className="font-crimson-pro text-primary">
+        <Pattern
+          className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain mb-12`}
+        />
         <Title>QUEM SOMOS?</Title>
-        <p className="text-center text-2xl">
+        <p className="text-center text-2xl max-[1200px]:px-8 min-[1200px]:px-[128px]">
           Acreditamos que cada caso é mais do que um processo, é uma parte da
           vida de alguém. Buscamos entregar segurança, clareza e resultados
           reais para quem confia em nosso trabalho, com ética, atenção aos
@@ -77,16 +85,43 @@ export default function Test() {
           clientes e enfrentamos cada desafio com estratégia e responsabilidade.
           Aqui, você é ouvido. E o seu direito, respeitado.
         </p>
+        <Pattern
+          className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain rotate-180 scale-x-[-1] mt-12`}
+        />
       </Section>
-      <Pattern
-        className={`w-full h-[64px] bg-[url('/pattern_1.svg')] bg-repeat bg-contain rotate-180 scale-x-[-1]`}
-      />
+
       <Hr />
       <Section
         id="services"
         className="my-8 min-[660px]:my-12 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
       >
         <Title>ÁREAS DE ATUAÇÃO</Title>
+        <div className="grid grid-cols-3 grid-rows-2 gap-4 w-full">
+          <Card>
+            <AppIcon icon={ShoppingCart} size={172} strokeWidth={1.1} />
+            CONSUMIDOR
+          </Card>
+          <Card>
+            <AppIcon icon={ShieldUser} size={172} strokeWidth={1} />
+            PREVIDENCIÁRIO
+          </Card>
+          <Card>
+            <AppIcon icon={BriefcaseBusiness} size={172} strokeWidth={1} />
+            TRABALHISTA
+          </Card>
+          <Card>
+            <AppIcon icon={FileText} size={172} strokeWidth={1} />
+            CÍVEL
+          </Card>
+          <Card>
+            <AppIcon icon={House} size={172} strokeWidth={1} />
+            IMOBILIÁRIO
+          </Card>
+          <Card>
+            <AppIcon icon={Hotel} size={172} strokeWidth={1} />
+            CONDOMINIAL
+          </Card>
+        </div>
       </Section>
     </>
   );
