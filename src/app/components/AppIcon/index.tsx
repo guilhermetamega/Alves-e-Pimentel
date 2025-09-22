@@ -20,7 +20,7 @@ export function AppIcon({
       size={size}
       strokeWidth={strokeWidth}
       className={`${className} text-secondary`}
-      aria-label={alt}
+      aria-label={`Ícone-${alt}`}
       role="img"
     />
   );

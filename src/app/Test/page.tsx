@@ -97,28 +97,48 @@ export default function Test() {
       >
         <Title>ÁREAS DE ATUAÇÃO</Title>
         <div className="grid grid-cols-3 grid-rows-2 gap-4 w-full">
-          <Card>
-            <AppIcon icon={ShoppingCart} size={172} strokeWidth={1.1} />
+          <Card description="Quando seus direitos são ignorados, agir com respaldo jurídico faz toda a diferença. Atuamos em casos de cobranças indevidas, contratos abusivos e falhas na prestação de serviços.">
+            <AppIcon
+              icon={ShoppingCart}
+              size={172}
+              strokeWidth={1.1}
+              alt="ShoppingCart"
+            />
             CONSUMIDOR
           </Card>
-          <Card>
-            <AppIcon icon={ShieldUser} size={172} strokeWidth={1} />
+          <Card description="Planejar a aposentadoria ou garantir benefícios não precisa ser complicado. Atuamos para que você tenha acesso aos seus direitos com segurança, agilidade e orientação clara em cada etapa do processo.">
+            <AppIcon
+              icon={ShieldUser}
+              size={172}
+              strokeWidth={1}
+              alt="ShieldUser"
+            />
             PREVIDENCIÁRIO
           </Card>
-          <Card>
-            <AppIcon icon={BriefcaseBusiness} size={172} strokeWidth={1} />
+          <Card description="Relações de trabalho justas começam com orientação clara e assertiva. Atuamos em ações de defesa de direitos trabalhistas e prevenção de riscos jurídicos.">
+            <AppIcon
+              icon={BriefcaseBusiness}
+              size={172}
+              strokeWidth={1}
+              alt="BriefcaseBusiness"
+            />
             TRABALHISTA
           </Card>
-          <Card>
-            <AppIcon icon={FileText} size={172} strokeWidth={1} />
+          <Card description="Questões civis envolvem patrimônio, família, contratos e responsabilidades do dia a dia. Nossa atuação é baseada em soluções seguras e estratégicas para proteger seus interesses.">
+            <AppIcon
+              icon={FileText}
+              size={172}
+              strokeWidth={1}
+              alt="FileText"
+            />
             CÍVEL
           </Card>
-          <Card>
-            <AppIcon icon={House} size={172} strokeWidth={1} />
+          <Card description="Comprar, vender ou regularizar um imóvel exige segurança jurídica e atenção aos detalhes. Atuamos para prevenir conflitos e proteger seu patrimônio em todas as fases do processo.">
+            <AppIcon icon={House} size={172} strokeWidth={1} alt="House" />
             IMOBILIÁRIO
           </Card>
-          <Card>
-            <AppIcon icon={Hotel} size={172} strokeWidth={1} />
+          <Card description="Conflitos em condomínios exigem equilíbrio entre regras, direitos e convivência. Atuamos na prevenção e resolução de disputas com foco na harmonia e segurança jurídica.">
+            <AppIcon icon={Hotel} size={172} strokeWidth={1} alt="Hotel" />
             CONDOMINIAL
           </Card>
         </div>
