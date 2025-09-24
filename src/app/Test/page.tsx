@@ -96,7 +96,7 @@ export default function Test() {
         className="my-8 min-[660px]:my-12 font-crimson-pro text-primary max-[1200px]:px-8 min-[1200px]:px-[128px]"
       >
         <Title>ÁREAS DE ATUAÇÃO</Title>
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 w-full">
+        <div className="min-[1100px]:grid max-[1100px]:flex max-[1100px]:flex-col max-[1100px]:items-center min-[1100px]:grid-cols-3 min-[800px]:grid-rows-2 min-[800px]:place-items-center gap-x-40 gap-y-8 w-full">
           <Card description="Quando seus direitos são ignorados, agir com respaldo jurídico faz toda a diferença. Atuamos em casos de cobranças indevidas, contratos abusivos e falhas na prestação de serviços.">
             <AppIcon
               icon={ShoppingCart}
