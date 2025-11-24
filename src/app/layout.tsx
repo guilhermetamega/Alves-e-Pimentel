@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from "./components/Head";
 
 export const metadata: Metadata = {
   title: {
-    default: "Alves & Pimentel Advocacia | Advogada no Rio de Janeiro",
-    template: "%s | Alves & Pimentel Advocacia"
+    default: "Alves & Pimentel Advocacia e Consultoria",
+    template: "%s | Alves & Pimentel Advocacia e Consultoria",
   },
   description:
     "Escritório de advocacia no Rio de Janeiro especializado em Direito Trabalhista, Previdenciário, Civil, Consumidor e Família. Atendimento humanizado, soluções jurídicas eficientes e consultoria completa.",
@@ -29,7 +28,6 @@ export const metadata: Metadata = {
     "previdenciário",
     "previdenciario",
     "civil",
-    "cívil",
     "familia",
     "família",
     "consumidor",
@@ -39,12 +37,12 @@ export const metadata: Metadata = {
     "advogado em rio de janeiro",
     "advogado especialista",
     "consultoria jurídica",
-    "atendimento ao jurídico",
+    "atendimento jurídico",
     "advogado online",
     "advocacia especializada",
     "direitos trabalhistas",
-    "recisão trabalhista",
-    "verbas recisórias",
+    "rescisão trabalhista",
+    "verbas rescisórias",
     "cálculo trabalhista",
     "adicional de insalubridade",
     "adicional de periculosidade",
@@ -62,7 +60,6 @@ export const metadata: Metadata = {
     "defesa em ações de cobrança",
     "revisão contratual",
     "compras pela internet",
-    "cobrança indevida",
     "negativação indevida",
     "golpe financeiro",
     "vício do produto",
@@ -101,20 +98,20 @@ export const metadata: Metadata = {
     "empresa não pagou minhas verbas",
     "INSS negou meu pedido",
     "como cancelar plano de internet",
-    "juros abusivos no empréstimo"
+    "juros abusivos no empréstimo",
   ],
 
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "Alves & Pimentel Advocacia & Consultoria",
-    url: "https://www.alvesepimentel.com",
+    siteName: "Alves & Pimentel Advocacia e Consultoria",
+    url: "https://alvesepimentel.com",
     title: "Alves & Pimentel Advocacia e Consultoria",
     description:
       "Especialistas em Direito Trabalhista, Previdenciário, Civil, Família e Consumidor.",
     images: [
       {
-        url: "https://www.alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
+        url: "https://alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
         width: 1200,
         height: 630,
         alt: "Alves & Pimentel Logo",
@@ -133,15 +130,15 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: {
       index: true,
-      follow: true
-    }
+      follow: true,
+    },
   },
 
   alternates: {
-    canonical: "https://alvesepimentel.com"
+    canonical: "https://alvesepimentel.com",
   },
 
-  metadataBase: new URL("https://www.alvesepimentel.com"),
+  metadataBase: new URL("https://alvesepimentel.com"),
 };
 
 export default function RootLayout({
@@ -153,53 +150,65 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LegalService",
     "@id": "https://alvesepimentel.com/#organization",
-    "url": "https://alvesepimentel.com",
-    "name": "Alves & Pimentel Advocacia",
-    "description":
+    url: "https://alvesepimentel.com",
+    name: "Alves & Pimentel Advocacia",
+    description:
       "Escritório de advocacia no Rio de Janeiro especializado em Direito Trabalhista, Previdenciário, Civil, Consumidor, Família e Civil. Atendimento humanizado e estratégico, com foco em resultados.",
-    "image": "https://alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
-    "logo": "https://alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
-    "telephone": "+55-21-98657-1994",
-    "email": "sheilaalves.adv@gmail.com",
-    "address": {
+    image: "https://alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
+    logo: "https://alvesepimentel.com/Logo_Alves_E_Pimentel.svg",
+    telephone: "+55-21-98657-1994",
+    email: "sheilaalves.adv@gmail.com",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "R. Vinte e Quatro de Maio, 1117 - Engenho Novo",
-      "addressLocality": "Rio de Janeiro",
-      "addressRegion": "RJ",
-      "postalCode": "20725-001",
-      "addressCountry": "BR"
+      streetAddress: "R. Vinte e Quatro de Maio, 1117 - Engenho Novo",
+      addressLocality: "Rio de Janeiro",
+      addressRegion: "RJ",
+      postalCode: "20725-001",
+      addressCountry: "BR",
     },
-    "priceRange": "R$R$",
-    "areaServed": {
+    priceRange: "R$R$",
+    areaServed: {
       "@type": "AdministrativeArea",
-      "name": "Rio de Janeiro e região"
+      name: "Rio de Janeiro e região",
     },
-    "founder": {
-    "@type": "Person",
-    "name": "Sheila Alves"
+    founder: {
+      "@type": "Person",
+      name: "Sheila Alves",
     },
-    "foundingDate": "2012"
+    foundingDate: "2012",
   };
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://alvesepimentel.com/#website",
-    "url": "https://alvesepimentel.com",
-    "name": "Alves & Pimentel Advocacia e Consultoria",
-    "description":
+    url: "https://alvesepimentel.com",
+    name: "Alves & Pimentel Advocacia e Consultoria",
+    description:
       "Site do escritório Alves & Pimentel Advocacia, especializado em Direito Trabalhista, Previdenciário, Civil, Consumidor e Família no Rio de Janeiro.",
-    "publisher": {
-      "@id": "https://alvesepimentel.com/#organization"
+    publisher: {
+      "@id": "https://alvesepimentel.com/#organization",
     },
-    "inLanguage": "pt-BR"
+    inLanguage: "pt-BR",
   };
+
   return (
-    <html lang="pt-br" data-theme="system">
-      <Head />
-      <body className={`antialiased dark:bg-primary-dark bg-primary`}>
-        {children}
-      </body>
+    <html lang="pt-BR" data-theme="light">
+      <head>
+        <link rel="preload" as="image" href="/bg_hero.jpg" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
+
+      <body className="antialiased bg-primary">{children}</body>
     </html>
   );
 }
