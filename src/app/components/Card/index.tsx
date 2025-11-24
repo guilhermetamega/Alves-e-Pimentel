@@ -15,9 +15,8 @@ export default function Card({ children, description, className }: Props) {
         ${className ?? ""}
         group relative
         w-full
-        max-w-[320px]          /* mobile bem tranquilo */
-        min-[480px]:max-w-[360px]
-        min-[800px]:max-w-[400px]
+        max-[800px]:max-w-[320px]
+        min-[800px]:w-[360px]
         h-[446px] min-[1400px]:h-[400px]
         flex flex-col items-center
         bg-primary border-4 border-secondary
