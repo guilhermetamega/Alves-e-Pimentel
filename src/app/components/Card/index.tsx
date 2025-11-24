@@ -6,10 +6,27 @@ type Props = {
   className?: string;
 };
 
+// src/app/components/Card/index.tsx
+
 export default function Card({ children, description, className }: Props) {
   return (
     <div
-      className={`${className} group relative w-[400px] max-[380px]:w-[296px] h-[446px] min-[1260px]:w-[360px] min-[1460px]:w-[400px] min-[1400px]:h-[400px] flex flex-col items-center bg-primary border-4 border-secondary rounded-md font-lato font-bold text-2xl text-secondary-light overflow-hidden transition-all duration-500 max-[660px]:transition-none`}
+      className={`
+        ${className ?? ""}
+        group relative
+        w-full
+        max-w-[320px]          /* mobile bem tranquilo */
+        min-[480px]:max-w-[360px]
+        min-[800px]:max-w-[400px]
+        h-[446px] min-[1400px]:h-[400px]
+        flex flex-col items-center
+        bg-primary border-4 border-secondary
+        rounded-md
+        font-lato font-bold text-2xl text-secondary-light
+        overflow-hidden
+        transition-all duration-500
+        max-[660px]:transition-none
+      `}
     >
       {/* Bloco principal (ícone + título) */}
       <div
@@ -23,7 +40,6 @@ export default function Card({ children, description, className }: Props) {
         {children}
       </div>
 
-      {/* Descrição (só aparece no hover, ou sempre visível em telas < 660px) */}
       {description && (
         <p
           className="
@@ -39,3 +55,4 @@ export default function Card({ children, description, className }: Props) {
     </div>
   );
 }
+
