@@ -13,15 +13,15 @@ export const siteConfig = {
   url: "https://www.alvesepimentel.com",
   foundingDate: "2012",
   whatsapp: {
-    number: "5521986571994",
+    number: "5521992861290",
     defaultMessage: "Bom dia! Poderia me ajudar?",
   },
   contact: {
     instagramHandle: "@sheilaalves_adv",
     instagramUrl: "https://www.instagram.com/sheilaalves_adv/",
     email: "sheilaalves.adv@gmail.com",
-    phoneDisplay: "(21) 986571994",
-    telephoneE164: "+5521986571994",
+    phoneDisplay: "(21) 99286-1290",
+    telephoneE164: "+5521992861290",
     address: null,
     officeHours: "Segunda a Sexta 10h - 17h",
     areaServed: "Brasil Inteiro",
