@@ -1,46 +1,91 @@
-/*Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Lato:wght@300;400;700&display=swap"); /*Lato Light + Regular + Bold*/
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&display=swap"); /*Crimson Pro Regualr*/
-
-/*Nodes*/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@0;1&family=Lato:wght@300;400;700&display=swap");
 @import "tailwindcss";
 
-/*Tema*/
 @theme {
-  /* Cores */
   --color-primary: #5d1b1b;
   --color-primary-light: #9c5252;
-  --color-primary-dark: #250b0b;
-
+  --color-primary-dark: #5d1b1b;
   --color-secondary: #ffbe40;
   --color-secondary-repeat: #ffbe40;
   --color-secondary-light: #fff1a9;
   --color-secondary-dark: #88530d;
-
   --color-gray: #565656;
   --color-gray-light: #fdfdfd;
   --color-gray-dark: #0f0f0f;
-  /* ------------------------------------------------------ */
-
-  /* Fontes */
-  --font-crimson-pro: "Crimson Pro", serif;
-  --font-lato: "Lato", sans-serif;
-  /* ------------------------------------------------------ */
+  --font-crimson-pro: "Crimson Pro", Georgia, serif;
+  --font-lato: "Lato", Arial, sans-serif;
 }
 
-html,
-body {
-  min-width: 360px;
-  height: 100vh;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
   max-width: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
 }
 
 body {
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--color-gray-light);
+  color: var(--color-primary-dark);
+  font-family: var(--font-lato);
+}
 
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-gray-light);
+a,
+button,
+input,
+textarea {
+  outline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-secondary);
+}
+
+.hero-background {
+  background-image:
+    linear-gradient(90deg, rgba(93, 27, 27, 0.96) 0%, rgba(93, 27, 27, 0.7) 52%, rgba(93, 27, 27, 0.12) 100%),
+    image-set(
+      url("/bg-hero-mobile.avif") type("image/avif"),
+      url("/bg-hero-mobile.webp") type("image/webp")
+    );
+  background-position: 68% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .hero-background {
+    background-image:
+      linear-gradient(90deg, rgba(93, 27, 27, 0.96) 0%, rgba(93, 27, 27, 0.62) 46%, rgba(93, 27, 27, 0.04) 78%),
+      image-set(
+        url("/bg-hero-desktop.avif") type("image/avif"),
+        url("/bg-hero-desktop.webp") type("image/webp")
+      );
+    background-position: center;
+  }
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

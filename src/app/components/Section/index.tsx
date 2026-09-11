@@ -4,16 +4,17 @@ type Props = {
   children: ReactNode;
   id: string;
   className?: string;
-  bgColor?: string;
+  labelledBy?: string;
 };
 
-export default function Section({ children, id, className, bgColor }: Props) {
+export default function Section({
+  children,
+  id,
+  className = "",
+  labelledBy,
+}: Props) {
   return (
-    <section
-      id={id}
-      className={`bg-${bgColor} ${className}`}
-      aria-labelledby={`${id}-title`}
-    >
+    <section id={id} className={className} aria-labelledby={labelledBy}>
       {children}
     </section>
   );
