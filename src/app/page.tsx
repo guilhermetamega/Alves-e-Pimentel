@@ -162,7 +162,7 @@ export default function Home() {
           className="relative overflow-hidden bg-gray-light py-16 md:py-24"
         >
           <div
-            className="absolute inset-x-0 top-0 h-12 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x"
+            className="about-pattern absolute inset-x-0 top-0 h-12 bg-contain bg-repeat-x"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
@@ -180,7 +180,7 @@ export default function Home() {
             </p>
           </div>
           <div
-            className="absolute inset-x-0 bottom-0 h-12 rotate-180 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x"
+            className="about-pattern absolute inset-x-0 bottom-0 h-12 rotate-180 bg-contain bg-repeat-x"
             aria-hidden="true"
           />
         </Section>

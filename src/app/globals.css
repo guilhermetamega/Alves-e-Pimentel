@@ -87,6 +87,10 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.about-pattern {
+  background-image: url("/pattern_1.svg?v=20260911-2");
+}
+
 .service-card__hint {
   display: none;
 }
@@ -281,7 +285,7 @@ summary::-webkit-details-marker {
   z-index: 0;
   width: 5rem;
   aspect-ratio: 130 / 135;
-  background-image: url("/partner-card-tile.svg");
+  background-image: url("/partner-card-tile.svg?v=20260911-2");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -315,7 +319,7 @@ summary::-webkit-details-marker {
     z-index: 0;
     display: block;
     width: clamp(4.5rem, 8vw, 8rem);
-    background-image: url("/decorative-strip.svg");
+    background-image: url("/decorative-strip.svg?v=20260911-2");
     background-position: top center;
     background-repeat: repeat-y;
     background-size: 100% auto;
