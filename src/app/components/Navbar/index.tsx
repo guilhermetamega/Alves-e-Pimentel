@@ -1,4 +1,3 @@
-import { Menu } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import links from "./links";
@@ -13,7 +12,7 @@ const linkClassName =
 export default function Navbar({ children }: Props) {
   return (
     <nav
-      className="relative mx-auto flex w-full max-w-[90rem] items-center justify-between px-4 py-3 sm:px-8 lg:px-16"
+      className="relative mx-auto flex w-full max-w-[90rem] items-center justify-center px-4 py-3 sm:px-8 lg:justify-between lg:px-16"
       aria-label="Menu principal"
     >
       {children}
@@ -33,24 +32,6 @@ export default function Navbar({ children }: Props) {
           </li>
         ))}
       </ul>
-
-      <details className="group lg:hidden">
-        <summary
-          className="flex size-12 cursor-pointer list-none items-center justify-center rounded-md border border-secondary text-secondary"
-          aria-label="Abrir menu principal"
-        >
-          <Menu aria-hidden="true" />
-        </summary>
-        <ul className="absolute inset-x-4 top-[calc(100%+0.375rem)] z-30 overflow-hidden rounded-lg border border-primary bg-primary-dark p-2 shadow-xl sm:left-auto sm:right-8 sm:w-72">
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} className={linkClassName}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </details>
     </nav>
   );
 }

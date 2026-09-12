@@ -1,0 +1,15 @@
+<svg width="128" height="1001" viewBox="0 0 128 1001" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M0 0L128 0V1001H0L0 0Z" fill="url(#pattern0_123_222)"/>
+<defs>
+<pattern id="pattern0_123_222" patternUnits="userSpaceOnUse" patternTransform="matrix(260.226 0 0 260.226 0 0)" preserveAspectRatio="none" viewBox="0 0 366 366" width="1" height="1">
+<g id="pattern0_123_222_inner">
+<g clip-path="url(#clip0_123_222)">
+<path d="M0 0C0 50.508 40.992 91.5 91.5 91.5C142.008 91.5 183 50.508 183 0H0ZM91.5 91.5C40.992 91.5 0 132.492 0 183H183C183 132.492 142.008 91.5 91.5 91.5ZM183 183C183 233.508 223.992 274.5 274.5 274.5C325.008 274.5 366 233.508 366 183H183ZM274.5 274.5C223.992 274.5 183 315.492 183 366H366C366 315.492 325.008 274.5 274.5 274.5Z" fill="#5D1B1B"/>
+<path d="M183 0V183C233.508 183 274.5 142.008 274.5 91.5C274.5 40.992 233.508 0 183 0ZM274.5 91.5C274.5 142.008 315.492 183 366 183V0C315.492 0 274.5 40.992 274.5 91.5ZM183 183C132.492 183 91.5 223.992 91.5 274.5C91.5 325.008 132.492 366 183 366V183ZM91.5 274.5C91.5 223.992 50.508 183 0 183V366C50.508 366 91.5 325.008 91.5 274.5Z" fill="#250B0B"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_123_222">
+<rect width="366" height="366" fill="white"/>
+</clipPath>
+</defs>
+</svg>

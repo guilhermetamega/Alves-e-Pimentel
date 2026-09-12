@@ -8,10 +8,7 @@ type Props = {
   defaultMessage: string;
 };
 
-export default function ContactForm({
-  whatsappNumber,
-  defaultMessage,
-}: Props) {
+export default function ContactForm({ whatsappNumber, defaultMessage }: Props) {
   const isConfigured = Boolean(
     whatsappNumber.replace(/\D/g, "") && defaultMessage.trim(),
   );
@@ -115,7 +112,6 @@ export default function ContactForm({
             required
           />
         </div>
-
       </div>
 
       <button
@@ -128,10 +124,10 @@ export default function ContactForm({
       </button>
       <p
         id="contact-form-status"
-        className="mt-4 text-center font-lato text-xs leading-relaxed text-gray-light"
+        className="mt-4 text-center font-lato text-xs leading-relaxed text-primary-light"
       >
         {isConfigured
-          ? "O formulário não armazena os dados neste site: ele apenas monta e abre a mensagem no WhatsApp para sua conferência."
+          ? "O formulário não armazena os dados neste site. Ele apenas monta e abre a mensagem no WhatsApp para sua conferência."
           : "O envio será habilitado assim que o número e a mensagem padrão do WhatsApp forem aprovados."}
       </p>
     </form>

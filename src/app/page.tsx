@@ -22,13 +22,10 @@ import ContactForm from "./components/ContactForm";
 import Header from "./components/Header";
 import Hr from "./components/Hr";
 import Navbar from "./components/Navbar";
+import PartnerCard from "./components/PartnerCard";
 import Section from "./components/Section";
 import Title from "./components/Title";
-import {
-  getWhatsAppUrl,
-  partnerProfiles,
-  siteConfig,
-} from "./site-config";
+import { getWhatsAppUrl, partnerProfiles, siteConfig } from "./site-config";
 
 const practiceAreas = [
   {
@@ -138,9 +135,11 @@ export default function Home() {
               id="hero-title"
               className="max-w-3xl font-crimson-pro text-4xl leading-[1.05] text-gray-light sm:text-5xl lg:text-6xl"
             >
-              COMPROMISSO COM O <span className="text-secondary">SEU DIREITO</span>
+              COMPROMISSO COM O{" "}
+              <span className="text-secondary">SEU DIREITO</span>
               <span className="mt-3 block">
-                ATENÇÃO COM A <span className="text-secondary">SUA HISTÓRIA</span>
+                ATENÇÃO COM A{" "}
+                <span className="text-secondary">SUA HISTÓRIA</span>
               </span>
             </h1>
 
@@ -163,24 +162,25 @@ export default function Home() {
           className="relative overflow-hidden bg-gray-light py-16 md:py-24"
         >
           <div
-            className="absolute inset-x-0 top-0 h-12 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x opacity-70"
+            className="absolute inset-x-0 top-0 h-12 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
             <Title id="about-title">QUEM SOMOS?</Title>
             <p className="mt-6 font-lato text-lg leading-relaxed text-primary-dark md:text-xl">
-              Acreditamos que cada caso é mais do que um processo, é uma parte da
-              vida de alguém. Buscamos entregar segurança, clareza e resultados
-              reais para quem confia em nosso trabalho, com ética, atenção aos
-              detalhes e uma escuta ativa. Construímos relações sólidas com nossos
-              clientes e enfrentamos cada desafio com estratégia e responsabilidade.
+              Acreditamos que cada caso é mais do que um processo, é uma parte
+              da vida de alguém. Buscamos entregar segurança, clareza e
+              resultados reais para quem confia em nosso trabalho, com ética,
+              atenção aos detalhes e uma escuta ativa. Construímos relações
+              sólidas com nossos clientes e enfrentamos cada desafio com
+              estratégia e responsabilidade.
             </p>
             <p className="mt-5 font-crimson-pro text-2xl text-primary">
               Aqui, você é ouvido. E o seu direito, respeitado.
             </p>
           </div>
           <div
-            className="absolute inset-x-0 bottom-0 h-12 rotate-180 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x opacity-70"
+            className="absolute inset-x-0 bottom-0 h-12 rotate-180 bg-[url('/pattern_1.svg')] bg-contain bg-repeat-x"
             aria-hidden="true"
           />
         </Section>
@@ -195,67 +195,71 @@ export default function Home() {
             <Title id="services-title">ÁREAS DE ATUAÇÃO</Title>
             <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
               {practiceAreas.map((area) => (
-                <Card key={area.title} title={area.title} description={area.description}>
+                <Card
+                  key={area.title}
+                  title={area.title}
+                  description={area.description}
+                >
                   <AppIcon icon={area.icon} size={88} />
                 </Card>
               ))}
             </div>
           </div>
         </Section>
-        <Hr />
 
+        <div className="bg-gray-light" aria-hidden="true">
+          <Image
+            src="/partners-wave.png"
+            width={1920}
+            height={104}
+            alt=""
+            className="block h-[clamp(3rem,5.4vw,6.5rem)] w-full rotate-180"
+          />
+        </div>
         <Section
           id="partners"
           labelledBy="partners-title"
-          className="bg-primary px-5 py-16 text-gray-light sm:px-8 md:py-24 lg:px-16"
+          className="bg-primary px-5 py-4 text-gray-light sm:px-8 md:py-8 lg:px-16"
         >
           <div className="mx-auto max-w-[90rem]">
             <Title id="partners-title" className="text-gray-light">
               NOSSOS PARCEIROS
             </Title>
 
-            <div className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-8 md:grid-cols-2">
               {partnerProfiles.map((profile, index) => (
-                <article
+                <PartnerCard
                   key={profile.name}
-                  className="mx-auto w-full max-w-sm overflow-hidden rounded-lg bg-gray-light p-4 text-center text-primary shadow-xl"
-                >
-                  <div className="relative aspect-square overflow-hidden rounded-md">
-                    <Image
-                      src={profile.image}
-                      alt={profile.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 767px) 90vw, 360px"
-                      loading={index === 0 ? "eager" : "lazy"}
-                    />
-                  </div>
-                  <h3 className="mt-5 font-lato text-sm font-bold text-primary">
-                    {profile.name}
-                  </h3>
-                  <p className="mt-2 font-lato text-xl font-bold leading-tight sm:text-2xl">
-                    {profile.specialty}
-                  </p>
-                  {profile.oab ? (
-                    <p className="mt-3 font-lato text-sm text-gray">{profile.oab}</p>
-                  ) : null}
-                  {profile.bio ? (
-                    <p className="mt-4 font-lato text-sm leading-relaxed text-gray">
-                      {profile.bio}
-                    </p>
-                  ) : null}
-                </article>
+                  profile={profile}
+                  eager={index === 0}
+                />
               ))}
             </div>
           </div>
         </Section>
 
+        <Image
+          src="/partners-wave.png"
+          width={1920}
+          height={104}
+          alt=""
+          className="block h-[clamp(3rem,5.4vw,6.5rem)] w-full"
+        />
+
         <Section
           id="contact"
           labelledBy="contact-title"
-          className="bg-gray-light px-5 py-16 sm:px-8 md:py-24 lg:px-16"
+          className="contact-section relative overflow-hidden bg-gray-light px-5 py-16 sm:px-8 md:py-24"
         >
-          <div className="mx-auto max-w-6xl">
+          <span
+            className="contact-ornament contact-ornament--left"
+            aria-hidden="true"
+          />
+          <span
+            className="contact-ornament contact-ornament--right"
+            aria-hidden="true"
+          />
+          <div className="relative z-10 mx-auto max-w-5xl">
             <Title id="contact-title">ENTRE EM CONTATO</Title>
             <div className="mt-8 grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
               <div className="text-center lg:pt-8 lg:text-left">
@@ -263,8 +267,8 @@ export default function Home() {
                   Queremos conhecer a sua situação de perto.
                 </p>
                 <p className="mt-5 font-lato text-base leading-relaxed text-gray md:text-lg">
-                  Compartilhe sua situação pelo formulário. O conteúdo será aberto
-                  no WhatsApp para sua revisão antes do envio.
+                  Compartilhe sua situação pelo formulário. O conteúdo será
+                  aberto no WhatsApp para sua revisão antes do envio.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
                   <ContactChip
@@ -278,7 +282,7 @@ export default function Home() {
                     icon="whatsapp"
                   />
                 </div>
-                <address className="mx-auto mt-8 grid max-w-md gap-3 text-left font-lato text-sm not-italic text-primary lg:mx-0">
+                <address className="mx-auto mt-8 grid max-w-md justify-items-center gap-3 text-center font-lato text-sm not-italic text-primary lg:mx-0 lg:justify-items-start lg:text-left">
                   <a
                     className="flex items-center gap-3 underline-offset-4 hover:underline"
                     href={`mailto:${siteConfig.contact.email}`}
@@ -348,7 +352,8 @@ export default function Home() {
           </a>
         </div>
         <p className="mt-5 font-lato text-sm">
-          {siteConfig.contact.officeHours} · Região atendida: {siteConfig.contact.areaServed}
+          {siteConfig.contact.officeHours} · Região atendida:{" "}
+          {siteConfig.contact.areaServed}
         </p>
         <p className="mt-6 font-lato text-sm">
           © {new Date().getFullYear()} {siteConfig.shortName}. Todos os direitos
@@ -358,10 +363,16 @@ export default function Home() {
           aria-label="Documentos legais"
           className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 font-lato text-xs"
         >
-          <Link href="/privacidade" className="underline-offset-4 hover:underline">
+          <Link
+            href="/privacidade"
+            className="underline-offset-4 hover:underline"
+          >
             Aviso de privacidade
           </Link>
-          <Link href="/aviso-legal" className="underline-offset-4 hover:underline">
+          <Link
+            href="/aviso-legal"
+            className="underline-offset-4 hover:underline"
+          >
             Aviso legal
           </Link>
         </nav>
